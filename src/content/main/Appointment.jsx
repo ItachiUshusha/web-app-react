@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import Calendar from 'react-calendar';
 import './Calendar.css';
+import { Modal } from './Modal' 
 
 export const Appointment = () => {
-  const [value, onChange] = useState(new Date());
+
+  const [value, onChange] = useState(new Date())
+  const [visible, setVisible] = useState(false)
 
   const cur_day = new Date()
   const day = cur_day.getDate()
@@ -11,19 +14,20 @@ export const Appointment = () => {
   const max_year = cur_year + 1
   const month = cur_day.getMonth()
 
-  console.log(new Date(max_year, month, new Date(cur_day.getDate())))
-
   return (
     <main>
         <div>
-        <Calendar 
+        {!visible && (<Calendar 
             onChange={onChange} 
             value={value} 
             minDate={cur_day}
             maxDate={new Date(max_year, month, day)}
             minDetail='year'
+            onClickDay={() => setVisible(true)}/>)}
+
+            {visible && (<Modal setVisible={setVisible} date={value}/>)}
             
-            />
+
         </div>
     </main>
   );

@@ -47,7 +47,7 @@ header{
     margin-right: 0;
 }
 
-.menu button, 
+.menu a, 
 .menu, .active {
     padding: 8px 10px;
     display: block;
@@ -61,12 +61,12 @@ header{
     border-radius: 8px;
 }
 
-.menu button {
+.menu a {
     color: #fff;
     text-decoration: none;
 }
 
-.menu button:hover:not(.active){
+.menu a:hover:not(.active){
     background-color: #1f0b2b;
     opacity: 0.8;
     border-radius: 8px;

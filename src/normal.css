@@ -7,11 +7,6 @@
 	border: none;
 }
 
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
 
 /* Links */
 
@@ -25,7 +20,7 @@ a:hover  {
 
 /* Common */
 
-aside, nav, footer, header, section, main {
+aside, nav, footer, section {
 	display: block;
 }
 

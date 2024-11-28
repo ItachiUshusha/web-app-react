@@ -4,6 +4,14 @@ import h from "./headerMenu.module.css"
 import img from"./content/img/logo.png"
 
 export function App() {
+
+  const [active, setActive] = useState(''); 
+
+  const makeActive = (value) =>{
+    setActive(value)
+  }
+
+
   return (
     <div className={h.wrapper}>
             <header>
@@ -12,9 +20,9 @@ export function App() {
                 </div>
                 <div className={h.menu}>
                     <ul>
-                        <li><Link to="/about">Обо мне</Link></li>
-                        <li><Link to="/price">Цена</Link></li>
-                        <li><Link to="/appointment">Записи</Link></li>
+                        <li><Link to="/about" onClick={()=>makeActive('about')} className={active === 'about' ? h.active : ''}>Обо мне</Link></li>
+                        <li><Link to="/price" onClick={()=>makeActive('price')} className={active === 'price' ? h.active : ''}>Цена</Link></li>
+                        <li><Link to="/appointment" onClick={()=>makeActive('appointment')} className={active === 'appointment' ? h.active : ''}>Записи</Link></li>
                     </ul>
                 </div>
                 <div className={h.inst}>

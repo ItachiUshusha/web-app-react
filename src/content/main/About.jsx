@@ -1,6 +1,6 @@
 
 export const About = () =>{
-    return (<div data-active-element-content="true" class="main-about">
+    return (<div data-active-element-content="true" className="main-about">
         <p>Всем привет меня зовут Софья и я мастер студии красоты марафет </p>
 
         <p>Здесь я создаю прекрасные образы для наших любимых клиенток и делаю макижи и укладки на любое мероприятие, а также занимаюсь оформлением бровей и ламинированием ресниц</p>
